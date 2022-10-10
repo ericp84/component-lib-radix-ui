@@ -11,7 +11,6 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   backgroundColor: yellowA.yellowA10,
   borderRadius: "100px",
   position: "relative",
-  //   boxShadow: `0 2px 10px ${blackA.blackA9}`,
   WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
   "&:focus": { boxShadow: `0 0 0 2px white` },
   '&[data-state="checked"]': { backgroundColor: "grey" },
@@ -42,17 +41,17 @@ const Label = styled("label", {
   userSelect: "none",
 });
 
-const Switch = () => (
+const Switch = ({ colorDark, colorLight }) => (
   <form>
     <Flex css={{ alignItems: "center" }}>
       <Label htmlFor="s1" css={{ paddingRight: 15 }}>
-        <SunIcon color={yellowA.yellowA10} />
+        <SunIcon color={colorLight} />
       </Label>
       <SwitchButton defaultChecked id="s1">
         <SwitchThumb />
       </SwitchButton>
       <Label htmlFor="s1" css={{ paddingLeft: 15 }}>
-        <MoonIcon color="grey" />
+        <MoonIcon color={colorDark} />
       </Label>
     </Flex>
   </form>

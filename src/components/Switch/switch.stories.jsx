@@ -17,3 +17,11 @@ Primary.args = {
   primary: true,
   label: "Switch",
 };
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  Secondary: true,
+  label: "Switch secondary",
+  colorDark: "grey",
+  colorLight: "yellow",
+};
