@@ -23,5 +23,5 @@ Secondary.args = {
   Secondary: true,
   label: "Switch secondary",
   colorDark: "grey",
-  colorLight: "yellow",
+  colorLight: "orange",
 };

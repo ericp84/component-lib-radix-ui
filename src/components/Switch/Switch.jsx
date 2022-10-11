@@ -45,13 +45,13 @@ const Switch = ({ colorDark, colorLight }) => (
   <form>
     <Flex css={{ alignItems: "center" }}>
       <Label htmlFor="s1" css={{ paddingRight: 15 }}>
-        <SunIcon color={colorLight} />
+        <SunIcon color={colorLight || yellowA.yellowA11} />
       </Label>
       <SwitchButton defaultChecked id="s1">
         <SwitchThumb />
       </SwitchButton>
       <Label htmlFor="s1" css={{ paddingLeft: 15 }}>
-        <MoonIcon color={colorDark} />
+        <MoonIcon color={colorDark || "purple"} />
       </Label>
     </Flex>
   </form>

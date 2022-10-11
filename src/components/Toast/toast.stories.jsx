@@ -6,7 +6,16 @@ export default {
   title: "Toast",
   component: Toast,
   argTypes: {
-    backgroundColor: { control: "color" },
+    color: {
+      options: ["violet", "green"],
+      control: {
+        type: "radio",
+      },
+    },
+    size: {
+      options: ["small", "medium", "large"],
+      control: { type: "radio" },
+    },
   },
 };
 
@@ -16,5 +25,4 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: "Switch",
-  size: "small",
 };

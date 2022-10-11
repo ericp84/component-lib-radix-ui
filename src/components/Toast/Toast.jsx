@@ -70,6 +70,7 @@ const StyledToast = styled(ToastPrimitive.Root, {
 });
 
 const StyledTitle = styled(ToastPrimitive.Title, {
+  fontFamily: "system-ui",
   gridArea: "title",
   marginBottom: 5,
   fontWeight: 500,
@@ -78,6 +79,7 @@ const StyledTitle = styled(ToastPrimitive.Title, {
 });
 
 const StyledDescription = styled(ToastPrimitive.Description, {
+  fontFamily: "system-ui",
   gridArea: "description",
   margin: 0,
   color: slate.slate11,
@@ -114,12 +116,14 @@ const Button = styled("button", {
   variants: {
     size: {
       small: {
+        fontFamily: "system-ui",
         fontSize: 12,
         padding: "0 10px",
         lineHeight: "25px",
         height: 25,
       },
       medium: {
+        fontFamily: "system-ui",
         fontSize: 20,
         padding: "0 10px",
         lineHeight: "25px",
@@ -135,6 +139,7 @@ const Button = styled("button", {
     },
     variant: {
       violet: {
+        fontFamily: "system-ui",
         backgroundColor: "white",
         color: violet.violet11,
         boxShadow: `0 2px 10px ${blackA.blackA7}`,
@@ -156,7 +161,7 @@ const Button = styled("button", {
   },
 });
 
-const Toast = ({ size }) => {
+const Toast = ({ size, color }) => {
   const [open, setOpen] = React.useState(false);
   const eventDateRef = React.useRef(new Date());
   const timerRef = React.useRef(0);
@@ -168,7 +173,7 @@ const Toast = ({ size }) => {
   return (
     <ToastProvider swipeDirection="right">
       <Button
-        variant={"green"}
+        variant={color}
         size={size}
         onClick={() => {
           setOpen(false);
@@ -190,7 +195,7 @@ const Toast = ({ size }) => {
           </time>
         </ToastDescription>
         <ToastAction asChild altText="Goto schedule to undo">
-          <Button variant="green" size="small">
+          <Button variant="green" size="medium">
             Undo
           </Button>
         </ToastAction>
