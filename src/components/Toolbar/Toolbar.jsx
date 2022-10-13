@@ -68,7 +68,7 @@ const StyledLink = styled(
   {
     ...itemStyles,
     backgroundColor: "transparent",
-    color: blueA.blueA11,
+    color: blueA.blueA10,
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
